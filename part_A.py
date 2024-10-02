@@ -5,6 +5,8 @@ Write the implementation of part A of the exercise below.
 """
 from math import sqrt
 
+num_lst = [1, 2, 3, 4, 5]       #Defining the list of numbers the program goes through
+
 def std_loops(x):
     """
     Compute standard deviation of x using loops.
@@ -37,9 +39,9 @@ def std_loops(x):
     
     return sd
        
-num_lst = [1, 2, 3, 4, 5]       #Defining the list of numbers the program goes through
-std_dev = std_loops(num_lst)
-print(f'The standard deviation, using method 1, is {std_dev:.2f}')
+std_dev1 = std_loops(num_lst)
+
+print(f'The standard deviation, using method 1, is {std_dev1:.2f}')
 
 
 import numpy as np  
@@ -71,12 +73,15 @@ def std_builtin(x):
     sd = sqrt(var)                  #Calculating the standard deviation
     
     return sd
-       
-num_lst = [1, 2, 3, 4, 5]           #Defining the list of numbers the program goes through
-std_dev = std_builtin(num_lst)
-print(f'The standard deviation, using method 2, is {std_dev:.2f}')
 
+std_dev2 = std_builtin(num_lst)
+
+print(f'The standard deviation, using method 2, is {std_dev2:.2f}')
+
+def std_numpy(x):                   #Defining the function
+    return np.std(x)                #Calculating the standard deviation, using NumPy
+std_dev3 = std_numpy(num_lst)
     
-print(f'The standard deviation, using method 3, is {np.std(num_lst):.2f}')
+print(f'The standard deviation, using method 3, is {std_dev3:.2f}')
 
     
