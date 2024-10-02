@@ -78,6 +78,7 @@ std_dev2 = std_builtin(num_lst)
 
 print(f'The standard deviation, using method 2, is {std_dev2:.2f}')
 
+
 def std_numpy(x):                   #Defining the function
     return np.std(x)                #Calculating the standard deviation, using NumPy
 std_dev3 = std_numpy(num_lst)
